@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
+
 int main() {
+    srand(time(NULL));
     std::cout << "Welcome to the Brain Games!" << std::endl << "May I have your name?" << std::endl;
     std::string name;
     getline (std::cin, name);
