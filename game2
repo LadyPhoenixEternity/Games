@@ -1,0 +1,38 @@
+#include <iostream>
+int main() {
+    std::cout << "Welcome to the Brain Games!" << std::endl << "May I have your name?" << std::endl;
+    std::string name;
+    getline (std::cin, name);
+    std::cout << "Hello, " << name << "!" << std::endl << "What number is missing in the progression?" << std::endl;
+    int howmany;
+   int a[howmany];
+   howmany = rand()%10+5;
+   for (int i=0; i<howmany; i++)
+   a[0]=rand()%5+2;
+   for (int i=1; i<howmany; i++) {
+       a[i]=a[i-1]*a[0];
+   }
+   int missing;
+   missing = rand()%howmany+1;
+    int x;
+    std::cout << "Question: ";
+   for (int i=0; i<howmany; i++) {
+       if (i!=missing) std::cout << a[i] << " ";
+       else {
+           x=a[i];
+           std::cout << ".." << " ";
+       }
+   }
+   int guess;
+   std::cout << "Your answer: ";
+   std::cin >> guess;
+   
+   if (x==guess) {
+       std::cout << "Correct!" << std::endl << "Congratulations, " << name << "!";
+   }
+   else {
+       std::cout << "'" << guess << "'" << " is wrong answer ;(. Correct answer was " << "'" << x << "'" << std::endl << "Let's try again, " << name << "!";
+   }
+    return 0;
+}
+
