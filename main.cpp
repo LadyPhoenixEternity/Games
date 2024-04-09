@@ -4,6 +4,7 @@
 #include "lib.h"
 #include "nok.h"
 #include "progression.h"
+#include "is_simple.h"
 
 using namespace std;
 
@@ -32,14 +33,23 @@ int main() {
             int missing = p1.second;
             int right = p1.second;
             int x;
-            std::cout << "Question: ";
+            cout << "Question: ";
             for (int i=0; i<a; i++) {
                 if (i!=missing) std::cout << prog[i] << " ";
                 else {
                     x=prog[i];
-                    std::cout << ".." << " ";
+                    cout << ".." << " ";
                 }
             }
+        }
+        if (choice == "c") {
+            cout << "Is this number simple: " << a << "?\n";
+            bool f = is_simple(a);
+            string right;
+            if (f == true)
+                right = "yes";
+            if (f == false)
+                right = "no";
         }
         int res;
         cout << "Your answer: ";
