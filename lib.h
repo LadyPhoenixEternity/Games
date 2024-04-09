@@ -18,7 +18,7 @@ int generate_a() {
 
 int generate_b() {
   
-  return rand() % 10 + 5;
+  return rand() % 5 + 2;
 }
 
 int generate_c() {
