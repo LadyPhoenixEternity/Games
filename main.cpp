@@ -18,7 +18,7 @@ int main() {
         int a, b, c;
         a = generate_a();
         b = generate_b();
-        c = generate_c();
+        c = generate_c(a);
         cout << "Choose the game: a) nok, b) progression, c) is_simple?";
         string choice;
         cin >> choice;
