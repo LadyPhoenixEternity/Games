@@ -20,6 +20,7 @@ int main() {
         cin >> choice;
         if choice == "a":
             int right = nok(a, b, c);
+            cout << "Question: " << a << " " << b << " " << c;
         if choice == "b":
             int right = progression(a, b, c);
         int res;
