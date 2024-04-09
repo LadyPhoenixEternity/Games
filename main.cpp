@@ -1,5 +1,9 @@
 #include <iostream>
+#include <vector>
+#include <utility>
 #include "lib.h"
+#include "nok.h"
+#include "progression.h"
 
 using namespace std;
 
@@ -24,6 +28,18 @@ int main() {
         }
         if (choice == "b") {
             pair<vector, int> p1 = pair<vector, int>(progression(a, b, c));
+            vector<int> prog = p1.first;
+            int missing = p1.second;
+            int right = p1.second;
+            int x;
+            std::cout << "Question: ";
+            for (int i=0; i<a; i++) {
+                if (i!=missing) std::cout << prog[i] << " ";
+                else {
+                    x=prog[i];
+                    std::cout << ".." << " ";
+                }
+            }
         }
         int res;
         cout << "Your answer: ";
