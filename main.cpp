@@ -16,9 +16,9 @@ int main() {
     for (int i = 0; i < 3; i++)
     {
         int a, b, c;
-        a = generate();
-        b = generate();
-        c = generate();
+        a = generate_a();
+        b = generate_b();
+        c = generate_c();
         cout << "Choose the game: a) nok, b) progression, c) is_simple?";
         string choice;
         cin >> choice;
