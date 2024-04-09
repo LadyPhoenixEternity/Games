@@ -11,7 +11,17 @@ void welcome(string name)
   
 }
 
-int generate() {
+int generate_a() {
   
-  return rand() % 10 + 1;
+  return rand() % 10 + 5;
+}
+
+int generate_b() {
+  
+  return rand() % 10 + 5;
+}
+
+int generate_c() {
+  
+  return rand() % 10 + 5;
 }
