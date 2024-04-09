@@ -18,11 +18,13 @@ int main() {
         cout << "Choose the game: a) nok, b) progression, c) is_simple?";
         string choice;
         cin >> choice;
-        if choice == "a":
+        if (choice == "a") {
             int right = nok(a, b, c);
-            cout << "Question: " << a << " " << b << " " << c;
-        if choice == "b":
-            int right = progression(a, b, c);
+            cout << "Question: " << a << " " << b << " " << c << "\n";
+        }
+        if (choice == "b") {
+            pair<vector, int> p1 = pair<vector, int>(progression(a, b, c));
+        }
         int res;
         cout << "Your answer: ";
         cin >> res;
