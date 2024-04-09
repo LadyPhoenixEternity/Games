@@ -9,24 +9,29 @@ int main() {
     cin >> name;
     welcome(name);
   
-   for (int i = 0; i < 3; i++)
-   {
-     int a, b, c;
-     a = generate();
-     b = generate();
-     c = generate();
-     cout << "Question: " << ' ' << a << ' ' << b << ' ' << c << "\n";
-     int lcm = nok(a, b, c);
-     int res;
-     cout << "Your answer: ";
-     cin >> res;
-     if (res == lcm)
-     {
-         cout << "Correct!" << std::endl;
-     }
-     else {
-         cout << "\'" << res << "\'" << " is wrong answer ;(. Correct answer was " << lcm << "\n";
-         std::cout << "Let\'s try again, " << name << "\n";
-     }
-   }
+    for (int i = 0; i < 3; i++)
+    {
+        int a, b, c;
+        a = generate();
+        b = generate();
+        c = generate();
+        cout << "Choose the game: a) nok, b) progression, c) is_simple?";
+        string choice;
+        cin >> choice;
+        if choice == "a":
+            int right = nok(a, b, c);
+        if choice == "b":
+            int right = progression(a, b, c);
+        int res;
+        cout << "Your answer: ";
+        cin >> res;
+        if (res == right)
+        {
+            cout << "Correct!" << std::endl;
+        }
+        else {
+            cout << "\'" << res << "\'" << " is wrong answer ;(. Correct answer was " << right << "\n";
+            std::cout << "Let\'s try again, " << name << "\n";
+        }
+    }
 }
