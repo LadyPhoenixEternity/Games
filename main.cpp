@@ -60,7 +60,7 @@ int main() {
         }
         else {
             cout << "\'" << res << "\'" << " is wrong answer ;(. Correct answer was " << right << "\n";
-            std::cout << "Let\'s try again, " << name << "\n";
+            cout << "Let\'s try again, " << name << "\n";
         }
     }
 }
